@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.default-button {
+  border: 1px solid #e9a233;
+  background-color: #e9a233;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 20px 40px;
+  white-space: nowrap;
+
+  &:hover {
+    .button-fill {
+      width: 100% !important;
+      z-index: 1;
+    }
+  }
+
+  p {
+    color: white !important;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 600;
+    z-index: 2 !important;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+}
+
+.button-fill {
+  width: 0;
+  transition: width 0.5s ease-in-out;
+  height: 100%;
+  background-color: #000;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.site-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  header {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    justify-content: space-around;
+
+    .logo-container {
+      background-color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 315px;
+      width: 100%;
+      height: 100%;
+      padding: 25px 50px;
+
+      img {
+        height: 42px;
+      }
+
+      span {
+        display: block;
+        background: #717070;
+        width: 1px;
+        height: 66%;
+      }
+
+      i {
+        color: #fff;
+        font-size: 26px;
+        /* padding-left: 50px; */
+      }
+    }
+
+    nav {
+      display: flex;
+      background-color: #fff;
+
+      width: 100%;
+      max-width: 730px;
+
+      ul {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+        width: 100%;
+        padding: 0 60px;
+        list-style: none;
+
+        li {
+          a {
+            text-decoration: none;
+            font-family: "Barlow", sans-serif;
+            font-size: 14px;
+            text-transform: uppercase;
+            color: #6a6a6a;
+          }
+        }
+      }
+    }
+
+    .callme-container {
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 315px;
+      height: 100%;
+      gap: 10px;
+      flex-shrink: 0;
+      width: 100%;
+
+      .phone-button {
+        border: 1px solid #e9a233;
+        background-color: #e9a233;
+        border-radius: 50%;
+        padding: 15px;
+        margin-right: 15px;
+
+        i {
+          color: #fff;
+          cursor: pointer;
+        }
+      }
+
+      .callme-contact {
+        display: flex;
+        flex-direction: column;
+        p {
+          color: #8f8f8f;
+          font-size: 12px;
+          font-family: "Barlow", sans-serif;
+        }
+
+        h6 {
+          color: #181818;
+          font-size: 16px;
+          white-space: nowrap;
+          font-family: "Barlow Condensed", sans-serif;
+        }
+      }
+    }
+  }
+}
